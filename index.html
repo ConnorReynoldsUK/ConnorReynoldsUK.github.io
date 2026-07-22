@@ -1,15 +1,148 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
 
-  <!-- Makes the website display correctly on phones -->
+  <!-- Ensures the website displays correctly on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Connor | About Me</title>
 
-  <!-- Shared styling used by every page -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Apply Menlo-style typography across the entire page */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #f7f2e8;
+      color: #222222;
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Main banner */
+    .site-banner {
+      padding: 70px 20px 45px;
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .site-banner h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 0.05em;
+    }
+
+    .site-banner p {
+      margin: 12px 0 0;
+      color: #555555;
+      font-size: 1.1rem;
+    }
+    .site-banner,
+    footer {
+    background-color: #eee5d5;
+    }    
+    /* Navigation buttons */
+    .page-navigation {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .page-navigation a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #222222;
+      border-radius: 4px;
+      background-color: #ffffff;
+      color: #222222;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.2s ease,
+                  color 0.2s ease,
+                  transform 0.2s ease;
+    }
+    
+    .page-navigation a:hover {
+      background-color: #222222;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .page-navigation a.active {
+      background-color: #222222;
+      color: #ffffff;
+    }
+    .page-navigation {
+    background-color: #f7f2e8;
+    }
+    /* Main page content */
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 60px 25px;
+    }
+
+    .about-section {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 190px;
+      height: 190px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #222222;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 16px auto;
+    }
+
+    /* Footer */
+    footer {
+      padding: 25px;
+      background-color: #f4f4f4;
+      border-top: 1px solid #dddddd;
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile styling */
+    @media screen and (max-width: 650px) {
+      .site-banner h1 {
+        font-size: 2.2rem;
+      }
+
+      .page-navigation {
+        gap: 8px;
+      }
+
+      .page-navigation a {
+        padding: 9px 14px;
+        font-size: 0.9rem;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -29,32 +162,32 @@
   <main>
     <section class="about-section">
 
+      <!-- Remove this image element until you upload images/profile.jpg -->
       <img
         class="profile-image"
         src="images/profile.jpg"
         alt="Photograph of Connor"
       >
 
-      <div>
-        <h2>About Me</h2>
+      <h2>About Me</h2>
 
-        <p>
-          I am a computational biology researcher interested in plant genomics,
-          gene regulation, circadian biology and machine learning.
-        </p>
+      <p>
+        I am a computational biology researcher interested in plant genomics,
+        gene regulation, circadian biology and machine learning.
+      </p>
 
-        <p>
-          My work combines biological datasets with computational methods to
-          understand genome function and variation across plant species.
-        </p>
-      </div>
+      <p>
+        My work combines biological datasets with computational methods to
+        understand genome function and variation across plant species.
+      </p>
 
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Connor</p>
+    <p>© 2026 Connor Reynolds</p>
   </footer>
 
 </body>
 </html>
+```
