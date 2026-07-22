@@ -4,28 +4,29 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- Ensures the website displays correctly on mobile devices -->
+  <!-- Makes the page display correctly on phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Connor | About Me</title>
 
   <style>
-    /* Apply Menlo-style typography across the entire page */
+    /* Apply the cream background to the entire page */
+    html,
     body {
       margin: 0;
-      min-height: 100vh;
-      background-color: #f7f2e8;
+      min-height: 100%;
+      background-color: #f5eddd;
       color: #222222;
       font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       line-height: 1.7;
       text-align: center;
     }
 
-    /* Main banner */
+    /* Top banner */
     .site-banner {
       padding: 70px 20px 45px;
-      background-color: #f4f4f4;
-      border-bottom: 1px solid #dddddd;
+      background-color: #f5eddd;
+      border-bottom: 1px solid #cfc4b0;
     }
 
     .site-banner h1 {
@@ -35,57 +36,56 @@
     }
 
     .site-banner p {
-      margin: 12px 0 0;
-      color: #555555;
+      margin: 12px auto 0;
+      color: #555047;
       font-size: 1.1rem;
     }
-    .site-banner,
-    footer {
-    background-color: #eee5d5;
-    }    
-    /* Navigation buttons */
+
+    /* Navigation bar */
     .page-navigation {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
       padding: 20px;
-      background-color: #ffffff;
-      border-bottom: 1px solid #e2e2e2;
+      background-color: #f5eddd;
+      border-bottom: 1px solid #cfc4b0;
     }
 
+    /* Navigation buttons */
     .page-navigation a {
       display: inline-block;
       padding: 10px 20px;
       border: 1px solid #222222;
       border-radius: 4px;
-      background-color: #ffffff;
+      background-color: #f5eddd;
       color: #222222;
       font-weight: bold;
       text-decoration: none;
-      transition: background-color 0.2s ease,
-                  color 0.2s ease,
-                  transform 0.2s ease;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
     }
-    
+
     .page-navigation a:hover {
       background-color: #222222;
-      color: #ffffff;
+      color: #f5eddd;
       transform: translateY(-2px);
     }
 
     .page-navigation a.active {
       background-color: #222222;
-      color: #ffffff;
+      color: #f5eddd;
     }
-    .page-navigation {
-    background-color: #f7f2e8;
-    }
-    /* Main page content */
+
+    /* Main content */
     main {
       display: flex;
       justify-content: center;
+      min-height: 450px;
       padding: 60px 25px;
+      background-color: #f5eddd;
     }
 
     .about-section {
@@ -99,9 +99,9 @@
       width: 190px;
       height: 190px;
       margin-bottom: 25px;
+      border: 2px solid #222222;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #222222;
     }
 
     h2 {
@@ -117,13 +117,13 @@
     /* Footer */
     footer {
       padding: 25px;
-      background-color: #f4f4f4;
-      border-top: 1px solid #dddddd;
-      color: #666666;
+      background-color: #f5eddd;
+      border-top: 1px solid #cfc4b0;
+      color: #625c52;
       font-size: 0.9rem;
     }
 
-    /* Mobile styling */
+    /* Smaller layout for phones */
     @media screen and (max-width: 650px) {
       .site-banner h1 {
         font-size: 2.2rem;
@@ -162,7 +162,7 @@
   <main>
     <section class="about-section">
 
-      <!-- Remove this image element until you upload images/profile.jpg -->
+      <!-- Remove this image section until images/profile.jpg exists -->
       <img
         class="profile-image"
         src="images/profile.jpg"
