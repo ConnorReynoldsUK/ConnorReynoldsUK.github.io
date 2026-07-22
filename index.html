@@ -21,44 +21,32 @@
       text-align: center;
     }
 
-    /* Top banner */
-    .site-banner {
-      padding: 70px 20px 45px;
-      background-color: #f5eddd;
-      border-bottom: 1px solid #cfc4b0;
-    }
-
-    .site-banner h1 {
-      margin: 0;
-      font-size: 3rem;
-      letter-spacing: 0.05em;
-    }
-
-    .site-banner p {
-      margin: 12px auto 0;
-      color: #555047;
-      font-size: 1.1rem;
-    }
-
     /* Navigation bar */
     .page-navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+      background-color: #2f3b4c;
+      border-bottom: 1px solid #2f3b4c;
+    }
+
+    .nav-row {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
-      padding: 20px;
-      background-color: #f5eddd;
-      border-bottom: 1px solid #cfc4b0;
     }
 
     /* Navigation buttons */
     .page-navigation a {
       display: inline-block;
       padding: 10px 20px;
-      border: 1px solid #222222;
+      border: 1px solid #ffffff;
       border-radius: 4px;
-      background-color: #f5eddd;
-      color: #222222;
+      background-color: #1b222c;
+      color: #ffffff;
       font-weight: bold;
       text-decoration: none;
       transition:
@@ -68,39 +56,84 @@
     }
 
     .page-navigation a:hover {
-      background-color: #222222;
-      color: #f5eddd;
+      background-color: #ffffff;
+      color: #2f3b4c;
       transform: translateY(-2px);
     }
 
     .page-navigation a.active {
-      background-color: #222222;
-      color: #f5eddd;
+      background-color: #ffffff;
+      color: #2f3b4c;
     }
 
     /* Main content */
     main {
-      display: flex;
-      justify-content: center;
-      min-height: 450px;
-      padding: 60px 25px;
       background-color: #f5eddd;
     }
 
-    .about-section {
-      width: 100%;
-      max-width: 760px;
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      max-width: 1000px;
+      min-height: 450px;
       margin: 0 auto;
-      text-align: center;
+      padding: 60px 25px;
+    }
+
+    .profile-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 260px;
+      padding: 25px;
+      background-color: #2f3b4c;
+      color: #ffffff;
+      border: 1px solid #2f3b4c;
+      border-radius: 8px;
+    }
+
+    .profile-name {
+      margin: 0 0 18px;
+      font-size: 1.3rem;
+      color: #ffffff;
     }
 
     .profile-image {
       width: 190px;
       height: 190px;
-      margin-bottom: 25px;
-      border: 2px solid #222222;
+      border: 2px solid #ffffff;
       border-radius: 50%;
       object-fit: cover;
+    }
+
+    .profile-position {
+      margin: 20px 0 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    .profile-preface {
+      margin: 0 0 24px;
+      color: #cfc4b0;
+      font-size: 0.8rem;
+    }
+
+    .profile-contact p {
+      margin: 6px 0;
+    }
+
+    .profile-contact a {
+      color: #ffffff;
+    }
+
+    .about-section {
+      flex: 1 1 420px;
+      min-width: 280px;
+      text-align: center;
     }
 
     h2 {
@@ -124,11 +157,7 @@
 
     /* Smaller layout for phones */
     @media screen and (max-width: 650px) {
-      .site-banner h1 {
-        font-size: 2.2rem;
-      }
-
-      .page-navigation {
+      .nav-row {
         gap: 8px;
       }
 
@@ -137,7 +166,7 @@
         font-size: 0.9rem;
       }
 
-      main {
+      .content-wrapper {
         padding: 40px 20px;
       }
     }
@@ -146,63 +175,75 @@
 
 <body>
 
-  <header class="site-banner">
-    <h1>Dr Connor Reynolds</h1>
-    <p>Computational Biology, Genomics and Artificial Intelligence</p>
-    <p>Postdoctoral Research Scientist at the Earlham Institue</p>
-    <p>
-      
-    </p>
-    <p>connor.reynolds@earlham.ac.uk</p>
-
-  </header>
-
   <nav class="page-navigation">
-    <a class="active" href="index.html">Overview</a>
-    <a href="cv.html">CV</a>
-    <a href="zero_shot.html">Evolutionary constraint analysis</a>
-    <a href="root_varaibility.html">Root expression variability</a>
-    <a href="publications.html">Publications</a>
+    <div class="nav-row">
+      <a class="active" href="index.html">Overview</a>
+      <a href="cv.html">CV</a>
+      <a href="publications.html">Publications</a>
+    </div>
+    <div class="nav-row">
+      <a href="zero_shot.html">Evolutionary constraint analysis</a>
+      <a href="root_varaibility.html">Root expression variability</a>
+    </div>
   </nav>
 
   <main>
-    <section class="about-section">
+    <div class="content-wrapper">
 
-      <!-- Remove this image section until images/cr_photo.jpg exists -->
-      <img
-        class="profile-image"
-        src="images/cr_photo.jpg"
-        alt="Photograph of Connor"
-      >
+      <aside class="profile-panel">
 
-      <h2>Overview</h2>
+        <p class="profile-name">Dr Connor Reynolds</p>
 
-      <p>
-        Connor is a tenacious computational biologist interested in applying machine 
-        learning to analyze genomics and single-cell transcriptomics data.
-      </p>
+        <img
+          class="profile-image"
+          src="images/cr_photo.jpg"
+          alt="Photograph of Connor"
+        >
 
-      <p>
-         
-      </p>
+        <p class="profile-position">Postdoctoral Research Scientist at the Earlham Institue</p>
 
-      <p>
-        Connor's work combines the use of DNA-based genomics large-language-models, single-cell 
-        foundation models and agentic systems to generate testable biological hypotheses.
-      </p>
-      
-      <p>
-         
-      </p>
-      
-      <p>
-        With previous experineces including being awarded access to the UK's national Isambard-AI 
-        supercomputing facility, working as a Research Fellow at the Alan Turing Insitute, and 
-        achieving 1st author publications in Nature Communications, Connor will not rest until 
-        the power of AI is fully harnessed towards biolgical sciences.
-      </p>
-      
-    </section>
+        <p class="profile-preface">Computational Biology, Genomics and Artificial Intelligence</p>
+
+        <div class="profile-contact">
+          <p>Email: <a href="mailto:connor.reynolds@earlham.ac.uk">connor.reynolds@earlham.ac.uk</a></p>
+          <p><a href="https://github.com/ConnorReynoldsUK" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          <p><a href="https://www.linkedin.com/in/connor-reynolds-0b9a46178/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+
+      </aside>
+
+      <section class="about-section">
+
+        <h2>Overview</h2>
+
+        <p>
+          Connor is a tenacious computational biologist interested in applying machine 
+          learning to analyze genomics and single-cell transcriptomics data.
+        </p>
+
+        <p>
+           
+        </p>
+
+        <p>
+          Connor's work combines the use of DNA-based genomics large-language-models, single-cell 
+          foundation models and agentic systems to generate testable biological hypotheses.
+        </p>
+        
+        <p>
+           
+        </p>
+        
+        <p>
+          With previous experineces including being awarded access to the UK's national Isambard-AI 
+          supercomputing facility, working as a Research Fellow at the Alan Turing Insitute, and 
+          achieving 1st author publications in Nature Communications, Connor will not rest until 
+          the power of AI is fully harnessed towards biolgical sciences.
+        </p>
+        
+      </section>
+
+    </div>
   </main>
 
   <footer>

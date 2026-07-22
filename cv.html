@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes the page display correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dr Connor Reynolds | CV</title>
+
+  <style>
+    /* Apply the cream background to the entire page */
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background-color: #f5eddd;
+      color: #222222;
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Navigation bar */
+    .page-navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+      background-color: #2f3b4c;
+      border-bottom: 1px solid #2f3b4c;
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Navigation buttons */
+    .page-navigation a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      background-color: #1b222c;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .page-navigation a:hover {
+      background-color: #ffffff;
+      color: #2f3b4c;
+      transform: translateY(-2px);
+    }
+
+    .page-navigation a.active {
+      background-color: #ffffff;
+      color: #2f3b4c;
+    }
+
+    /* Main content */
+    main {
+      background-color: #f5eddd;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      max-width: 1000px;
+      min-height: 450px;
+      margin: 0 auto;
+      padding: 60px 25px;
+    }
+
+    .profile-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 260px;
+      padding: 25px;
+      background-color: #2f3b4c;
+      color: #ffffff;
+      border: 1px solid #2f3b4c;
+      border-radius: 8px;
+    }
+
+    .profile-name {
+      margin: 0 0 18px;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+
+    .profile-image {
+      width: 190px;
+      height: 190px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile-position {
+      margin: 20px 0 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    .profile-preface {
+      margin: 0 0 24px;
+      color: #cfc4b0;
+      font-size: 0.8rem;
+    }
+
+    .profile-contact p {
+      margin: 6px 0;
+    }
+
+    .profile-contact a {
+      color: #ffffff;
+    }
+
+    .about-section {
+      flex: 1 1 420px;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 28px auto;
+    }
+
+    /* CV embed */
+    .cv-download {
+      margin: 0 0 20px;
+    }
+
+    .cv-download a {
+      color: #222222;
+    }
+
+    .cv-embed {
+      width: 100%;
+      max-width: 700px;
+      height: 800px;
+      margin: 0 auto;
+      border: 1px solid #cfc4b0;
+      border-radius: 6px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 25px;
+      background-color: #f5eddd;
+      border-top: 1px solid #cfc4b0;
+      color: #625c52;
+      font-size: 0.9rem;
+    }
+
+    /* Smaller layout for phones */
+    @media screen and (max-width: 650px) {
+      .nav-row {
+        gap: 8px;
+      }
+
+      .page-navigation a {
+        padding: 9px 14px;
+        font-size: 0.9rem;
+      }
+
+      .content-wrapper {
+        padding: 40px 20px;
+      }
+
+      .cv-embed {
+        height: 550px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="page-navigation">
+    <div class="nav-row">
+      <a href="index.html">Overview</a>
+      <a class="active" href="cv.html">CV</a>
+      <a href="publications.html">Publications</a>
+    </div>
+    <div class="nav-row">
+      <a href="zero_shot.html">Evolutionary constraint analysis</a>
+      <a href="root_varaibility.html">Root expression variability</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="content-wrapper">
+
+      <aside class="profile-panel">
+
+        <p class="profile-name">Dr Connor Reynolds</p>
+
+        <img
+          class="profile-image"
+          src="images/cr_photo.jpg"
+          alt="Photograph of Connor"
+        >
+
+        <p class="profile-position">Postdoctoral Research Scientist at the Earlham Institue</p>
+
+        <p class="profile-preface">Computational Biology, Genomics and Artificial Intelligence</p>
+
+        <div class="profile-contact">
+          <p>Email: <a href="mailto:connor.reynolds@earlham.ac.uk">connor.reynolds@earlham.ac.uk</a></p>
+          <p><a href="https://github.com/ConnorReynoldsUK" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          <p><a href="https://www.linkedin.com/in/connor-reynolds-0b9a46178/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+
+      </aside>
+
+      <section class="about-section">
+
+        <h2>Curriculum Vitae</h2>
+
+        <p class="cv-download">
+          <a href="images/CR_gitCV.pdf" target="_blank" rel="noopener noreferrer">Open full PDF in new tab</a>
+        </p>
+
+        <iframe
+          class="cv-embed"
+          src="images/CR_gitCV.pdf"
+          title="Connor Reynolds CV"
+        ></iframe>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Connor Reynolds</p>
+  </footer>
+
+</body>
+</html>
