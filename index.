@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes the website display correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Connor | About Me</title>
+
+  <!-- Shared styling used by every page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-banner">
+    <h1>Connor</h1>
+    <p>Computational Biology and Plant Genomics</p>
+  </header>
+
+  <nav class="page-navigation">
+    <a class="active" href="index.html">About Me</a>
+    <a href="cv.html">CV</a>
+    <a href="blog.html">Blog</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+
+  <main>
+    <section class="about-section">
+
+      <img
+        class="profile-image"
+        src="images/profile.jpg"
+        alt="Photograph of Connor"
+      >
+
+      <div>
+        <h2>About Me</h2>
+
+        <p>
+          I am a computational biology researcher interested in plant genomics,
+          gene regulation, circadian biology and machine learning.
+        </p>
+
+        <p>
+          My work combines biological datasets with computational methods to
+          understand genome function and variation across plant species.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Connor</p>
+  </footer>
+
+</body>
+</html>
