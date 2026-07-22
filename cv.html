@@ -148,7 +148,7 @@
       margin: 28px auto;
     }
 
-    /* CV embed */
+    /* CV content */
     .cv-download {
       margin: 0 0 20px;
     }
@@ -157,13 +157,73 @@
       color: #222222;
     }
 
-    .cv-embed {
-      width: 100%;
+    .cv-content {
       max-width: 800px;
-      height: 800px;
       margin: 0 auto;
-      border: 1px solid #cfc4b0;
-      border-radius: 6px;
+      text-align: left;
+    }
+
+    .cv-section {
+      margin-bottom: 36px;
+    }
+
+    .cv-section h3 {
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #2f3b4c;
+    }
+
+    .cv-entry {
+      margin-bottom: 20px;
+    }
+
+    .cv-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-role {
+      margin: 0 0 8px;
+      font-weight: bold;
+    }
+
+    .cv-date {
+      display: block;
+      margin-top: 4px;
+      font-weight: bold;
+      color: #2f3b4c;
+    }
+
+    .cv-entry ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .cv-entry li {
+      margin-bottom: 6px;
+    }
+
+    .cv-detail {
+      margin: 0;
+      max-width: none;
+    }
+
+    .cv-skill {
+      margin-bottom: 16px;
+    }
+
+    .cv-skill:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-skill p {
+      margin: 0 0 4px;
+      max-width: none;
+    }
+
+    .cv-skill-tags {
+      color: #625c52;
+      font-size: 0.9rem;
     }
 
     /* Footer */
@@ -188,10 +248,6 @@
 
       .content-wrapper {
         padding: 40px 20px;
-      }
-
-      .cv-embed {
-        height: 550px;
       }
     }
   </style>
@@ -244,11 +300,217 @@
           <a href="images/CR_gitCV.pdf" target="_blank" rel="noopener noreferrer">Open full PDF in new tab</a>
         </p>
 
-        <iframe
-          class="cv-embed"
-          src="images/CR_gitCV.pdf"
-          title="Connor Reynolds CV"
-        ></iframe>
+        <div class="cv-content">
+
+          <div class="cv-section">
+            <h3>Employment</h3>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Postdoctoral Research Assistant, Earlham Institute</span>
+                <span class="cv-date">03.2026 – Present</span>
+              </p>
+              <ul>
+                <li>Funded through an institute development grant to innovate genomics large language model (gLLM) applications for genomics research in plants.</li>
+                <li>Involved first ML-driven evolutionary constraint mapping of the Arabidopsis and potato genomes using zero-shot masked imputation scores in the gLLM model PlantCAD2.</li>
+                <li>Successfully applied for a compute grant awarding access to Isambard-AI supercomputing resources.</li>
+                <li>Included classification and interpretation of highly- and lowly-variable genes based on single cell expression in Arabidopsis by fine-tuning PlantCAD2 with a test performance F1 score of 0.84.</li>
+                <li>Identification of important motifs and k-mers driving gLLM predictions using gradient-activation.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Genomics Data Scientist, TraitSeq Ltd (part-time during PhD)</span>
+                <span class="cv-date">09.2024 – 02.2026</span>
+              </p>
+              <ul>
+                <li>Provided data science support within an AgTech start-up company focused on predicting phenotypic traits for precision breeding and crop health.</li>
+                <li>Identified gene expression biomarkers displaying consistent significant associations with herbicide response based on 5 phytotoxicity measurements related to plant health &amp; fitness in maize field data.</li>
+                <li>Supported the development of agentic pipelines for bioinformatics analyses of multiomics data.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Alan Turing Institute Research Fellow, Earlham Institute / Alan Turing Institute</span>
+                <span class="cv-date">02.2021 – 09.2022</span>
+              </p>
+              <ul>
+                <li>BBSRC-funded data science fellowship in collaboration with The Alan Turing Institute and Norwich Bioscience Institutes.</li>
+                <li>Embedded in the Plant Genomics group to apply techniques in machine learning and artificial intelligence for characterization of circadian clock function in plants.</li>
+                <li>Conception of ChronoGauge – an AI-based method for estimating the circadian time in plants using gene expression data.</li>
+                <li>Advanced training and mentorship in machine learning and data science delivered by the Alan Turing Institute.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h3>Education</h3>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>PhD in Biological Sciences, Earlham Institute (computational-based)</span>
+                <span class="cv-date">10.2022 – 03.2026</span>
+              </p>
+              <ul>
+                <li>Worked within the Anthony Hall Group (Earlham Institute) and Antony Dodd Group (John Innes Centre).</li>
+                <li>Fully-funded studentship delivered by the prestigious Norwich Research Park Doctoral Training Programme.</li>
+                <li>Thesis submitted 6 months early in 3 years and 6 months.</li>
+                <li>Published 1st author Nature Communications paper in 3rd year (Reynolds et al. 2025).</li>
+                <li>Thesis title: Using machine learning to predict the circadian time of plants using gene expression.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>MSc by Research in Biomolecular Science, University of East Anglia</span>
+                <span class="cv-date">10.2019 – 09.2020</span>
+              </p>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>BSc (Honours) Biomedicine, University of East Anglia</span>
+                <span class="cv-date">10.2016 – 07.2019</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h3>Internships</h3>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Professional Internship Placement, Science &amp; Technology Facilities Council (STFC)</span>
+                <span class="cv-date">03.2025 – 06.2025</span>
+              </p>
+              <ul>
+                <li>Embedded within the Machine Learning and Molecular Dynamics groups to improve the accuracy and efficiency of molecular simulation analyses.</li>
+                <li>Generated 1ms molecular dynamics simulation trajectories using GROMACS in lysozyme crystal structures.</li>
+                <li>Implemented graph transformers in PyTorch to classify residue-level neighbourhoods with an F1 score of 0.81.</li>
+              </ul>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Bioinformatics Summer Internship, University of East Anglia</span>
+                <span class="cv-date">06.2018 – 09.2018</span>
+              </p>
+              <ul>
+                <li>Processing and sequence alignment of degradome-seq data in A. thaliana using the Patman short-sequence alignment tool.</li>
+                <li>Development of a Python-based software tool for analysis and visualization of sites of degraded mRNA.</li>
+                <li>Improvement of in silico techniques for predicting mRNA sites targeted by microRNA mediated cleavage.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h3>Technical skills</h3>
+
+            <div class="cv-skill">
+              <p><strong>Programming / scripting languages:</strong> Python, R, Bash</p>
+            </div>
+
+            <div class="cv-skill">
+              <p><strong>Machine learning:</strong> developing and training models including multi-model ensembles and foundation models</p>
+              <p class="cv-skill-tags">Scikit-learn | XGBoost | TensorFlow | PyTorch | MLPs | CNNs | RNNs | Transformers | Foundation models</p>
+            </div>
+
+            <div class="cv-skill">
+              <p><strong>Large language models:</strong> Agentic system development, coding acceleration and word embedding analyses</p>
+              <p class="cv-skill-tags">Claude | GPT | Llama | DistilBERT | MiniLLM</p>
+            </div>
+
+            <div class="cv-skill">
+              <p><strong>Genomics large language models:</strong> fine-tuning of pre-trained gLMs for DNA prediction tasks and zero-shot evolutionary constraint prediction</p>
+              <p class="cv-skill-tags">HuggingFace | AgroNT | PlantCaduceus | Evo2</p>
+            </div>
+
+            <div class="cv-skill">
+              <p><strong>Bioinformatics:</strong> Quality control, adaptor trimming, sequence alignment, read quantification, expression matrix validation, differential expression analysis, high performance computing, genome-wide-association, singularity containers</p>
+              <p class="cv-skill-tags">Slurm | STAR | EdgeR | limma | GAPIT | Github | Agentic pipeline development</p>
+            </div>
+
+            <div class="cv-skill">
+              <p><strong>Single cell data analysis:</strong> Processing single-cell data, filtering of low quality cells, doublet detection, anchor identification, integration across batches, clustering, marker detection, transfer labelling, reference cell-type annotation</p>
+              <p class="cv-skill-tags">Cellranger | Seurat | Scanpy | DoubletFinder | Single-cell foundation model</p>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h3>Grants &amp; awards</h3>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>UK National Isambard-AI Access Compute Grant</span>
+                <span class="cv-date">12.04.2026</span>
+              </p>
+              <p class="cv-detail">Compute grant including access to Isambard-AI GPU resources as a co-principal investigator for predicting evolutionary constraint across plant genomes as a research project.</p>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>AI in RNA Biology – RNA Society Conference Award</span>
+                <span class="cv-date">28.09.2025</span>
+              </p>
+              <p class="cv-detail">Received Oral Presentation Award.</p>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Norwich Research Park PhD Summer Conference 2025 Prize</span>
+                <span class="cv-date">17.06.2025</span>
+              </p>
+              <p class="cv-detail">Awarded 1st place prize for best poster.</p>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h3>Selected conference &amp; engagement activities</h3>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Plant &amp; Animal Genome Conference 2026 – San Diego</span>
+                <span class="cv-date">10.01.2026</span>
+              </p>
+              <p class="cv-detail">Invited speaker at Machine Learning and Systems Biology session.</p>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Plant &amp; Animal Genome Conference 2023 – San Diego</span>
+                <span class="cv-date">12.01.2023</span>
+              </p>
+              <p class="cv-detail">Invited speaker at AI in Biology session.</p>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>Alan Turing Institute &amp; Norwich Bioscience Institutes Symposium</span>
+                <span class="cv-date">07.07.2022</span>
+              </p>
+              <p class="cv-detail">Main speaker.</p>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>2021 Earlham Institute Innovate Conference</span>
+                <span class="cv-date">17.11.2021</span>
+              </p>
+              <p class="cv-detail">Invited speaker for AI in Plant Sciences session.</p>
+            </div>
+
+            <div class="cv-entry">
+              <p class="cv-role">
+                <span>2021 Earlham Institute Scientific Advisory Board</span>
+                <span class="cv-date">19.10.2021</span>
+              </p>
+              <p class="cv-detail">Invited speaker at Genomics for Food Security session.</p>
+            </div>
+          </div>
+
+        </div>
 
       </section>
 
