@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes the page display correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dr Connor Reynolds | Evolutionary constraint analysis</title>
+
+  <style>
+    /* Apply the cream background to the entire page */
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background-color: #f5eddd;
+      color: #222222;
+      font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Navigation bar */
+    .page-navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 20px;
+      background-color: #2f3b4c;
+      border-bottom: 1px solid #2f3b4c;
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Navigation buttons */
+    .page-navigation a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      background-color: #1b222c;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .page-navigation a:hover {
+      background-color: #ffffff;
+      color: #2f3b4c;
+      transform: translateY(-2px);
+    }
+
+    .page-navigation a.active {
+      background-color: #ffffff;
+      color: #2f3b4c;
+    }
+
+    /* Main content */
+    main {
+      background-color: #f5eddd;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      max-width: 1400px;
+      min-height: 450px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .profile-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 0 260px;
+      padding: 25px;
+      background-color: #2f3b4c;
+      color: #ffffff;
+      border: 1px solid #2f3b4c;
+      border-radius: 8px;
+      position: sticky;
+      top: 25px;
+    }
+
+    .profile-name {
+      margin: 0 0 18px;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+
+    .profile-image {
+      width: 190px;
+      height: 190px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile-position {
+      margin: 20px 0 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #ffffff;
+    }
+
+    .profile-preface {
+      margin: 0 0 24px;
+      color: #cfc4b0;
+      font-size: 0.8rem;
+    }
+
+    .profile-contact p {
+      margin: 6px 0;
+    }
+
+    .profile-contact a {
+      color: #ffffff;
+    }
+
+    .about-section {
+      flex: 1 1 420px;
+      min-width: 280px;
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 28px auto;
+    }
+
+    /* Figure styling */
+    .figure-container {
+      margin: 32px auto;
+      max-width: 800px;
+    }
+
+    .figure-container img {
+      max-width: 90%;
+      height: auto;
+      border: 1px solid #cfc4b0;
+      border-radius: 4px;
+    }
+
+    .figure-container figcaption {
+      margin-top: 10px;
+      color: #625c52;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      padding: 25px;
+      background-color: #f5eddd;
+      border-top: 1px solid #cfc4b0;
+      color: #625c52;
+      font-size: 0.9rem;
+    }
+
+    /* Smaller layout for phones */
+    @media screen and (max-width: 650px) {
+      .nav-row {
+        gap: 8px;
+      }
+
+      .page-navigation a {
+        padding: 9px 14px;
+        font-size: 0.9rem;
+      }
+
+      .content-wrapper {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="page-navigation">
+    <div class="nav-row">
+      <a href="index.html">Overview</a>
+      <a href="cv.html">CV</a>
+      <a href="publications.html">Publications</a>
+    </div>
+    <div class="nav-row">
+      <a class="active" href="zero_shot.html">Evolutionary constraint analysis</a>
+      <a href="root_varaibility.html">Root expression variability</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="content-wrapper">
+
+      <aside class="profile-panel">
+
+        <p class="profile-name">Dr Connor Reynolds</p>
+
+        <img
+          class="profile-image"
+          src="images/cr_photo.jpg"
+          alt="Photograph of Connor"
+        >
+
+        <p class="profile-position">Postdoctoral Research Scientist at the Earlham Institue</p>
+
+        <p class="profile-preface">Computational Biology, Genomics and Artificial Intelligence</p>
+
+        <div class="profile-contact">
+          <p>Email: <a href="mailto:connor.reynolds@earlham.ac.uk">connor.reynolds@earlham.ac.uk</a></p>
+          <p><a href="https://github.com/ConnorReynoldsUK" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          <p><a href="https://www.linkedin.com/in/connor-reynolds-0b9a46178/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+
+      </aside>
+
+      <section class="about-section">
+
+        <h2>Evolutionary constraint analysis</h2>
+
+        <p>
+          PlantCAD2 is a genomics large-language-model (gLLM) which has been pre-trained to impute
+          the bases of masked nucleotides across plant DNA sequences. By doing this across millions
+          of sequences in 65 angiosperms, it learns patterns and the "gramma" of many plant genomes.
+        </p>
+
+        <p>
+          Foundation models like PlantCAD2 are ideal for fine-tuning to new tasks, meaning their
+          original base imputation head can be replaced with a new regressor or classifier which
+          predicts a new target. This enables PlantCAD2 to use patterns learned during pre-training
+          to a different task that is still expected to rely on patterns in the DNA sequence.
+        </p>
+
+        <p>
+          However, BERT-like models such as PlantCAD2 also offer the ability to approximate
+          evolutionary constraint using the original base imputation head. This <strong>zero-shot</strong>
+          method was highlighted in Figure 4 of the <a href="https://www.pnas.org/doi/10.1073/pnas.2421738122#sec-1" target="_blank" rel="noopener noreferrer">original PlantCAD paper</a>:
+        </p>
+
+        <figure class="figure-container">
+          <img src="images/plantcad_fig4.png" alt="Figure 4 from the PlantCAD paper illustrating the zero-shot evolutionary constraint method">
+          <figcaption>Zhai et al. 2025</figcaption>
+        </figure>
+
+        <p>
+          As shown, the softmax of the logit outputs for each base are used to score each masked
+          nucleotide based on how "confidently" the model predicts the true reference base compared
+          with an alternative base. This appears to represent evolutionary constraint, as more
+          functional sites tend to give stronger constraint compared to less functional sites,
+          like introns.
+        </p>
+
+        <p>
+          The approach in the PlantCAD paper was limited, using only a few targeted test sites to
+          evaluate the constraint analysis. This limitation was likely because each nucleotide must
+          be masked one-at-a-time within a 500bp context sequence, thus being computationally costly
+          to pass hundreds of millions of masked windows through the pre-trained model.
+        </p>
+
+        <p>
+          I was awarded a grant giving me access to 10,000 GPU hours using the Isambard-AI UK
+          supercomputing facility. This enabled me to complete a zero-shot analysis across ~30,000
+          Arabidopsis genes - potentially being the first AI-driven evolutionary constraint mapping
+          of a plant genome.
+        </p>
+
+        <p>
+          An example can be shown for the circadian clock gene TOC1:
+        </p>
+
+        <figure class="figure-container">
+          <img src="images/full_toc1_seq.png" alt="Evolutionary constraint scores across the full TOC1 gene sequence">
+        </figure>
+
+        <p>
+          Here, we see clearly that the coding regions of TOC1 are significantly more constrained
+          compared with other regions including UTRs and introns, with sparse peaks in the promoter
+          region.
+        </p>
+
+        <p>
+          Focusing specifically on TOC1's coding sequence, we can see patterns emerge:
+        </p>
+
+        <figure class="figure-container">
+          <img src="images/cds_analysis.png" alt="Evolutionary constraint scores across the TOC1 coding sequence">
+        </figure>
+
+        <p>
+          The high constraint regions at the beginning and end of the sequence represent known
+          functional domains, while the centre represents disordered residues.
+          <strong>What is that floating artefact in the centre?</strong> That is a tandem repeat
+          region - it appears to have high evolutionary constraint as it is a common feature to
+          TOC1 genes across angiosperms.
+        </p>
+
+        <p>
+          Looking at the 3rd nucleotide representing each codon, it is significantly less
+          constrained that the 1st and 2nd nucleotide:
+        </p>
+
+        <figure class="figure-container">
+          <img src="images/codon_analysis.png" alt="Evolutionary constraint scores split by codon position">
+        </figure>
+
+        <p>
+          This is expected. The 3rd nucleotide in a codon is often more redundant, thus can be less
+          constrained without impacting protein function.
+        </p>
+
+        <p>
+          Some simple explorations of our constraint map includes comparing the constraint
+          predicted in promoter regions of different classes of genes.
+        </p>
+
+        <p>
+          This includes <strong>circadian vs non-circadian genes</strong>:
+        </p>
+
+        <figure class="figure-container">
+          <img src="images/circ_constraint.png" alt="Promoter constraint comparison between circadian and non-circadian genes">
+        </figure>
+
+        <p>
+          <strong>Upregulated vs downregulated vs non-responsive genes to heatshock</strong>:
+        </p>
+
+        <figure class="figure-container">
+          <img src="images/heatshock_constraint.png" alt="Promoter constraint comparison between heatshock upregulated, downregulated and non-responsive genes">
+        </figure>
+
+        <p>
+          <strong>Nitrogen responsive vs non-responsive genes</strong>:
+        </p>
+
+        <figure class="figure-container">
+          <img src="images/nue_constraint.png" alt="Promoter constraint comparison between nitrogen responsive and non-responsive genes">
+        </figure>
+
+        <p>
+          These significant differences in promoter constraint reflect only the beginning of our
+          work in AI-driven evolutionary constraint.
+        </p>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Connor Reynolds</p>
+  </footer>
+
+</body>
+</html>
