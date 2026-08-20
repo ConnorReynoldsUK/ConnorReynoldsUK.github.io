@@ -246,9 +246,11 @@
 
         <p>
           Foundation models like PlantCAD2 are ideal for fine-tuning to new tasks, meaning their
-          original base imputation head can be replaced with a new regressor or classifier which
-          predicts a new target. This enables PlantCAD2 to use patterns learned during pre-training
-          to a different task that is still expected to rely on patterns in the DNA sequence.
+          original base imputation head can be replaced with a new regressor or classifier which 
+          performs a completely new task (e.g. predicting gene expression levels or gene groups).
+          The idea is that PlantCAD2 learns DNA regulatory gramma during pre-training, from which
+          these patterns can be used to support a soft updating of the model to perform a task 
+          dependent on DNA regulatory gramma.
         </p>
 
         <p>
